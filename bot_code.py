@@ -665,10 +665,10 @@ def check_pms():
             lemmy.private_message.mark_as_read(pm_id, True)
             continue
 
-        if pm_context == "#feedback":
-            lemmy.private_message.create(f"{bot_strings.GREETING} {pm_username}\n\n{bot_strings.FEEDBACK_MESSAGE}\n\n{bot_strings.PM_SIGNOFF}", pm_sender)
-            lemmy.private_message.mark_as_read(pm_id, True)
-            continue
+        # if pm_context == "#feedback":
+        #     lemmy.private_message.create(f"{bot_strings.GREETING} {pm_username}\n\n{bot_strings.FEEDBACK_MESSAGE}\n\n{bot_strings.PM_SIGNOFF}", pm_sender)
+        #     lemmy.private_message.mark_as_read(pm_id, True)
+        #     continue
 
         if pm_context in ["#unsubscribe", "#subscribe"]:
             status = "unsub" if pm_context == "#unsubscribe" else "sub"
