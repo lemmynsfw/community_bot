@@ -2509,10 +2509,10 @@ def ordinal(n):
 
 def insert_block(person_id):
     
-    if settings.DEFAULT_INSTANCE_BLOCKS:
-        instance_blocks_list = [int(x) for x in settings.DEFAULT_INSTANCE_BLOCKS.split(',')]
-    else:
-        instance_blocks_list = []
+    # if settings.DEFAULT_INSTANCE_BLOCKS:
+    #     instance_blocks_list = [int(x) for x in settings.DEFAULT_INSTANCE_BLOCKS.split(',')]
+    # else:
+    instance_blocks_list = []
     
     published = datetime.utcnow()
     
