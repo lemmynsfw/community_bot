@@ -127,4 +127,4 @@ UNSUB_MESSAGE = (
 SUB_MESSAGE = (
     "Your subscribe request was successful. You can unsubscribe at any time by sending me a message with `#unsubscribe`")
 FEEDBACK_MESSAGE = (
-    f"The access code for the feedback survey is {settings.SURVEY_CODE}\n\n You can access the survey by [clicking here]({FEEDBACK_URL}) and selecting the available survey.")
+    f"feedback survey is disabled currently")
