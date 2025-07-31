@@ -655,10 +655,10 @@ def check_pms():
             lemmy.private_message.mark_as_read(pm_id, True)
             continue
 
-        if pm_context == "#rules":
-            lemmy.private_message.create(f"{bot_strings.GREETING} {pm_username}\n\n{bot_strings.INS_RULES}\n\n{bot_strings.PM_SIGNOFF}", pm_sender)
-            lemmy.private_message.mark_as_read(pm_id, True)
-            continue
+        # if pm_context == "#rules":
+        #     lemmy.private_message.create(f"{bot_strings.GREETING} {pm_username}\n\n{bot_strings.INS_RULES}\n\n{bot_strings.PM_SIGNOFF}", pm_sender)
+        #     lemmy.private_message.mark_as_read(pm_id, True)
+        #     continue
 
         if pm_context == "#credits":
             lemmy.private_message.create(f"{bot_strings.GREETING} {pm_username}\n\n{bot_strings.CREDITS}\n\n{bot_strings.PM_SIGNOFF}", pm_sender)
@@ -870,14 +870,14 @@ def get_new_users():
                 public_user_id,
                 email) == "new_user":
             logging.debug("sending new user a pm")
-            lemmy.private_message.create(
-                bot_strings.GREETING +
-                " " +
-                username +
-                ". " +
-                bot_strings.WELCOME_MESSAGE +
-                bot_strings.PM_SIGNOFF,
-                public_user_id)
+            # lemmy.private_message.create(
+            #     bot_strings.GREETING +
+            #     " " +
+            #     username +
+            #     ". " +
+            #     bot_strings.WELCOME_MESSAGE +
+            #     bot_strings.PM_SIGNOFF,
+            #     public_user_id)
 
             # Check if the email is from a known spam domain
             if is_spam_email(email):

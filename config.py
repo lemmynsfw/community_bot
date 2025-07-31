@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     DB_PASSWORD: str
     DB_HOST: str
     DB_PORT: int
-    DEFAULT_INSTANCE_BLOCKS: str
+    # DEFAULT_INSTANCE_BLOCKS: str
     
     class Config:
         env_file = ".env"
