@@ -28,7 +28,9 @@ COPY config.py .
 COPY main.py .
 COPY .env .
 COPY .bumpversion.toml .
-COPY resources/ ./resources/
+# COPY resources/ ./resources/
+
+VOLUME /bot/resources
 
 # Install any needed packages specified in requirements.txt
 RUN pip3 install --no-cache-dir -r requirements.txt
