@@ -1,0 +1,6 @@
+services:
+  automodbot:
+    build: 
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./resources:/resources
